@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RealDrem/static/css/main.a4a20492.chunk.css",
+    "main.js": "/RealDrem/static/js/main.e36b644d.chunk.js",
+    "main.js.map": "/RealDrem/static/js/main.e36b644d.chunk.js.map",
+    "runtime-main.js": "/RealDrem/static/js/runtime-main.e27ff7ec.js",
+    "runtime-main.js.map": "/RealDrem/static/js/runtime-main.e27ff7ec.js.map",
+    "static/js/2.2c4be4db.chunk.js": "/RealDrem/static/js/2.2c4be4db.chunk.js",
+    "static/js/2.2c4be4db.chunk.js.map": "/RealDrem/static/js/2.2c4be4db.chunk.js.map",
+    "static/js/3.c30fbaf1.chunk.js": "/RealDrem/static/js/3.c30fbaf1.chunk.js",
+    "static/js/3.c30fbaf1.chunk.js.map": "/RealDrem/static/js/3.c30fbaf1.chunk.js.map",
+    "index.html": "/RealDrem/index.html",
+    "static/css/main.a4a20492.chunk.css.map": "/RealDrem/static/css/main.a4a20492.chunk.css.map",
+    "static/js/2.2c4be4db.chunk.js.LICENSE.txt": "/RealDrem/static/js/2.2c4be4db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e27ff7ec.js",
+    "static/js/2.2c4be4db.chunk.js",
+    "static/css/main.a4a20492.chunk.css",
+    "static/js/main.e36b644d.chunk.js"
+  ]
+}
