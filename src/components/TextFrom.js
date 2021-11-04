@@ -29,16 +29,12 @@ export default function TextFrom(props) {
   };
 
   const Copy = () => {
-    let copy = document.getElementById("myText");
-    copy.select();
-    navigator.clipboard.writeText(copy.value);
+    navigator.clipboard.writeText(Text);
     props.ShowAlert(' YourText has been copy successfully','success')
   };
 
   const Cut = () => {
-    let copy = document.getElementById("myText");
-    copy.select();
-    navigator.clipboard.writeText(copy.value);
+    navigator.clipboard.writeText(Text);
     setText("");
     props.ShowAlert(' YourText has been cut successfully','success')
   };
@@ -61,7 +57,7 @@ export default function TextFrom(props) {
 
         <div className="mb-3">
           <label htmlFor="myBox" className="form-label">
-            | Characters {Text.length} |-| Words {Text.split(" ").length} |
+            | Characters {Text.length} |-| Words {Text.split(/\s+/).filter((element)=>{return element.length!==0}).length} |
           </label>
           <textarea
             className="form-control"
@@ -79,6 +75,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={OneClick}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button1Title}
         </button>
@@ -86,6 +83,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={TowClick}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button2Title}
         </button>
@@ -93,6 +91,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={Space}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button5Title}
         </button>
@@ -100,6 +99,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={Cut}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button6Title}
         </button>
@@ -107,6 +107,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={Copy}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button4Title}
         </button>
@@ -114,6 +115,7 @@ export default function TextFrom(props) {
           type="button"
           onClick={clear}
           className="btn btn-primary my-2 mx-2"
+          disabled={Text.length===0}
         >
           {props.Button3Title}
         </button>
@@ -123,9 +125,9 @@ export default function TextFrom(props) {
         style={{ color: props.mode === "light" ? "black" : "white" }}
       >
         <h1> Your Text Summary </h1>
-        <p>{0.008 * Text.split(" ").length} Minutes To Red</p>
+        <p>{0.008 * Text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes To Red</p>
         <h3>Preview</h3>
-        <p>{Text.length > 0 ? Text : "Enter your text"}</p>
+        <p>{Text.length > 0 ? Text : "Nothing to preview!"}</p>
       </div>
     </>
   );

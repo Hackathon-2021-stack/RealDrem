@@ -2,9 +2,9 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextFrom from "./components/TextFrom";
-// import About from "./components/About";
+import About from "./components/About";
 import Alert from "./components/Alert";
-// import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import React, { useState } from "react";
 
 function App() {
@@ -35,11 +35,12 @@ function App() {
 
   const [sAlert, setsAlert] = useState(null);
 
+
   return (
     <>
-      {/* <Router> */}
+      <Router>
         <Navbar
-          Title="Real Drem"
+          Title="My Real Dream"
           TitleHref="/"
           mode={Theme}
           TextMode={TextMod}
@@ -48,11 +49,11 @@ function App() {
 
         <Alert alert={sAlert} />
 
-        {/* <Switch>
+        <Switch>
           <Route exact path="/about">
-          <About mode={Theme} />
+          <About mode={Theme}  />
           </Route>
-          <Route exact path="/"> */}
+          <Route exact path="/">
             <TextFrom
               ShowAlert={ShowAlert}
               mode={Theme}
@@ -65,13 +66,13 @@ function App() {
               Button5Title="Remove Extra Space"
               Button6Title="Cut Text"
             />
-          {/* </Route>
-        </Switch> */}
+          </Route>
+        </Switch>
 
         <div className="container my-3">
           
         </div>
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
